@@ -1,0 +1,134 @@
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="title" content="Aika on rahaa" />
+    <meta
+      name="description"
+      content="Aikaraha kertoo paljon sinun täytyy tehdä töitä, saadaksesi haluamasi tuotteen."
+    />
+    <meta
+      name="keywords"
+      content="verotus, verot, raha, palkka, aika, työnteko"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="Finnish" />
+    <meta name="author" content="Tarmo Urrio" />
+    <title>Aika on rahaa</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        font-size: 1.2rem;
+      }
+      input {
+        font-size: 1.2rem;
+        padding: 0.2rem;
+      }
+      input[type="checkbox"] {
+        transform: scale(1.5);
+      }
+      #grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 2rem;
+        margin-top: 8rem;
+        justify-content: center;
+        align-items: center;
+      }
+      #footer {
+        margin-top: 8rem;
+        text-align: center;
+      }
+
+      @media only screen and (max-width: 640px) {
+        body {
+          font-size: 1rem;
+        }
+        #grid-container {
+          display: grid;
+          margin-top: 1rem;
+          grid-template-columns: auto;
+          padding: 0;
+        }
+
+        #footer {
+          margin-top: 2rem;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div style="margin-top: 2rem; text-align: center">
+      <h1>Aika on <span style="color: #00e600">rahaa</span></h1>
+      <p style="font-style: italic">
+        Laske tarvittava työmäärä tuotteen ostoon
+      </p>
+      <hr />
+    </div>
+    <div id="grid-container">
+      <div style="text-align: right; margin: auto">
+        <form style="margin: 1.25rem">
+          <label for="palkka"
+            >Kuukausipalkkasi: <input type="text" id="palkka" placeholder="2100" /> </label
+          ><br /><br />
+          <label for="veropros"
+            >Veroprosenttisi: <input type="text" id="veropros" placeholder="18" /> </label
+          ><br /><br />
+          <label style="font-size: 1rem" for="tyel"
+            >Laske mukaan TyEL ja Työttömyysvakuuusmaksut?
+            <input type="checkbox" id="tyel" /> </label
+          ><br /><br />
+          <label for="tunti"
+            >Tuntimäärä viikossa: <input type="text" id="tunti" placeholder="36" /> </label
+          ><br /><br />
+          <label for="osto"
+            >Ostettavan tuotteen hinta:
+            <input type="text" id="osto" placeholder="100" />
+          </label>
+          <br /><br />
+        </form>
+      </div>
+      <div
+        style="
+          margin: 1.5rem;
+          padding: 3rem;
+          text-align: center;
+          border-style: groove;
+        "
+      >
+        <div>
+          Nettopalkkasi on:
+          <span id="netto" style="font-weight: bold">0 €</span>
+        </div>
+        <hr />
+        <div>
+          Tuntipalkkasi on:
+          <span id="tuntipalkka" style="font-weight: bold">0 €</span>
+        </div>
+        <hr />
+        <div>
+          Joudut tekemään
+          <span id="tyomaara" style="font-weight: bold"></span> töitä saadaksesi
+          haluamasi
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <hr />
+      <p>
+        Made by
+        <a href="https://urrio.fi" rel="noopener noreferrer" target="_blank"
+          >Tarmo</a
+        >
+      </p>
+    </div>
+
+    <script src="jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="laskin.js" type="text/javascript"></script>
+  </body>
+</html>
